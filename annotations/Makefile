@@ -19,7 +19,7 @@ J2OBJC_ROOT = ..
 include ../make/common.mk
 include classes.mk
 
-JAR_NAME = j2objc_annotations.jar
+JAR_NAME = j2objc-annotations-3.0.0-oracle-00001.jar
 JAR = $(BUILD_DIR)/$(JAR_NAME)
 DIST_JAR = $(DIST_JAR_DIR)/$(JAR_NAME)
 
@@ -51,6 +51,9 @@ $(DIST_JAR): $(JAR) | $(DIST_JAR_DIR)
 
 dist: $(DIST_JAR)
 	@:
+	@mvn -DnewVersion="3.0.0-oracle-00001" -DprocessAllModules=true versions:set
+	@mvn clean install -Dgpg.skip
+	@mvn -Durl=https://artifactory.oci.oraclecorp.com/bfs-dev-generic-local/non-validated/2890f024-fad0-4c7d-b13e-158aacf474df -DrepositoryId=releases -DpomFile=pom.xml -Dfile=build_result/j2objc-annotations-3.0.0-oracle-00001.jar -Dfiles=target/j2objc-annotations-3.0.0-oracle-00001-javadoc.jar,target/j2objc-annotations-3.0.0-oracle-00001-sources.jar -Dtypes=jar,jar -Dclassifiers=sources,javadoc -Pcompliant-profile --settings settings.xml  org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy-file
 
 clean:
 	@rm -rf $(BUILD_DIR) $(DIST_JAR)

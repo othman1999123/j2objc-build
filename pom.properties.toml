@@ -10,4 +10,4 @@ version-suffix = "-oracle-00001"
 [rootparent]
 groupId    = "com.google.j2objc"
 artifactId = "j2objc-annotations"
-version    = "3.0.0"
+version    = "3.0.0-oracle-00001"

@@ -1,0 +1,18 @@
+# use python 3.8 at least
+requests
+# toml == 0.10.2
+# requires python >= 3.7
+tomli
+# requires python >= 3.0
+dohq-artifactory
+
+yattag
+# maybe that requere some specially configuration about openssl version requests
+oci
+
+atlassian-python-api
+
+beautifulsoup4
+pybase64
+regex
+# json

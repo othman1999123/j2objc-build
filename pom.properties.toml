@@ -5,9 +5,9 @@ project-name   = "j2objc-annotations"
 source-code    = "https://github.com/google/j2objc.git"
 tag-name       = "3.0.0"
 build-id       = "2890f024-fad0-4c7d-b13e-158aacf474fg"
-build-commands = "verify org.apache.maven.plugins:maven-deploy-plugin:3.1.2:deploy javadoc:jar"
+build-commands = "{ goal: \"verify org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy javadoc:jar source:jar\", args: \"-DskipTests=true -Prelease -Danimal.sniffer.skip=true -Dmaven.compiler.target=8 -Dmaven.compiler.source=8 -Drat.skip=true -DaltDeploymentRepository=build::file:./artifacts\" }"
 version-suffix = "-oracle-00001"
-[j2objc-annotations]
+[rootparent]
 groupId    = "com.google.j2objc"
 artifactId = "j2objc-annotations"
 version    = "3.0.0"

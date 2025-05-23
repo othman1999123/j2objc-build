@@ -1,30 +1,15 @@
 [project-general-info]
-build-type = "GRADLE"
-jdk-version = "jdk-11"
-project-name = "caffeine"
-source-code = "https://github.com/ben-manes/caffeine.git"
-tag-name = "v3.1.8"
-build-id = "52359a2b-4d75-4b51-ae20-cbaeb3d19c3d"
-build-commands = "{ goal: \"publishAllPublicationsToBFS_internal_repoRepository\", args: \"-x test\" }"
+build-type     = "MAVEN"
+jdk-version    = "jdk-17"
+project-name   = "j2objc-annotations"
+source-code    = "https://github.com/google/j2objc.git"
+tag-name       = "3.0.0"
+build-id       = "2890f024-fad0-4c7d-b13e-158aacf474fg"
+build-commands = { goal = "verify org.apache.maven.plugins:maven-deploy-plugin:3.1.2:deploy javadoc:jar",
+                   args = "--settings settings.xml -DskipTests -Drat.skip=true -Dgpg.skip=true -Prelease" }
 version-suffix = "-oracle-00001"
-[rootparent]
-groupId = "com.github.ben-manes.caffeine"
-artifactId = "caffeine"
-version = "3.1.8-SNAPSHOT"
-[caffeine]
-groupId = "com.github.ben-manes.caffeine"
-artifactId = "caffeine"
-version = "3.1.8-SNAPSHOT"
-[guava]
-groupId = "com.github.ben-manes.caffeine"
-artifactId = "guava"
-version = "3.1.8-SNAPSHOT"
-[jcache]
-groupId = "com.github.ben-manes.caffeine"
-artifactId = "jcache"
-version = "3.1.8-SNAPSHOT"
-[simulator]
-groupId = "com.github.ben-manes.caffeine"
-artifactId = "simulator"
-version = "3.1.8-SNAPSHOT"
 
+[j2objc-annotations]
+groupId    = "com.google.j2objc"
+artifactId = "j2objc-annotations"
+version    = "3.0.0"

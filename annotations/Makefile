@@ -53,7 +53,7 @@ dist: $(DIST_JAR)
 	@:
 	@mvn -DnewVersion="3.0.0-oracle-00001" -DprocessAllModules=true versions:set --settings settings.xml
 	@mvn clean install -Dgpg.skip --settings settings.xml
-	@mvn -Durl=https://artifactory.oci.oraclecorp.com/bfs-dev-generic-local/non-validated/2890f024-fad0-4c7d-b13e-158aacf474fg -DrepositoryId=releases -DpomFile=pom.xml -Dfile=build_result/j2objc-annotations-3.0.0-oracle-00001.jar -Dfiles=target/j2objc-annotations-3.0.0-oracle-00001-javadoc.jar,target/j2objc-annotations-3.0.0-oracle-00001-sources.jar -Dtypes=jar,jar -Dclassifiers=sources,javadoc -Pcompliant-profile --settings settings.xml  org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy-file
+	@mvn -Durl=https://artifactory.oci.oraclecorp.com/bfs-dev-generic-local/non-validated/2890f024-fad0-4c7d-b13e-158aacf474fg_1 -DrepositoryId=releases -DpomFile=pom.xml -Dfile=build_result/j2objc-annotations-3.0.0-oracle-00001.jar -Dfiles=target/j2objc-annotations-3.0.0-oracle-00001-javadoc.jar,target/j2objc-annotations-3.0.0-oracle-00001-sources.jar -Dtypes=jar,jar -Dclassifiers=sources,javadoc -Pcompliant-profile --settings settings.xml  org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy-file
 
 clean:
 	@rm -rf $(BUILD_DIR) $(DIST_JAR)

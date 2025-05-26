@@ -4,7 +4,7 @@ jdk-version    = "jdk-17"
 project-name   = "j2objc-annotations"
 source-code    = "https://github.com/google/j2objc.git"
 tag-name       = "3.0.0"
-build-id       = "2890f024-fad0-4c7d-b13e-158aacf474fg"
+build-id       = "2890f024-fad0-4c7d-b13e-158aacf474fg_1"
 build-commands = "{ goal: \"verify org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy javadoc:jar source:jar\", args: \"-DskipTests=true -Prelease -Danimal.sniffer.skip=true -Dmaven.compiler.target=8 -Dmaven.compiler.source=8 -Drat.skip=true -DaltDeploymentRepository=build::file:./artifacts\" }"
 version-suffix = "-oracle-00001"
 [rootparent]
